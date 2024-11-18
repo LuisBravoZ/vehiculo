@@ -31,7 +31,7 @@ return [
 
     'connections' => [
 
-        's qlite' => [ 
+        'sqlite' => [ 
             'driver' => 'sqlite',
             'url' => env('DB_URL'),
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
@@ -42,7 +42,7 @@ return [
             'synchronous' => null,
         ],
 
-        'my sql' => [ 
+        'mysql' => [ 
             'driver' => 'mysql',
             'url' => env('DB_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
@@ -62,7 +62,7 @@ return [
             ]) : [],
         ],
 
-        'm ariadb' => [
+        'mariadb' => [
             'driver' => 'mariadb',
             'url' => env('DB_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
@@ -82,7 +82,7 @@ return [
             ]) : [],
         ],
 
-        'pgs ql' => [
+        'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DB_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
@@ -97,7 +97,7 @@ return [
             'sslmode' => 'prefer',
         ],
 
-        'sqls rv' => [
+        'sqlsrv' => [
             'driver' => 'sqlsrv',
             'url' => env('DB_URL'),
             'host' => env('DB_HOST', 'localhost'),
