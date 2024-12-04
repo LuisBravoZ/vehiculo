@@ -10,9 +10,13 @@ class VehiculoController extends Controller
 {
     public function index(){
         $vehiculo = Vehiculo::all();
+
         return response()->json([
-            'Vehiculo:' => $vehiculo,
+            'messegue'=>'Vehiculo',
+            'Vehiculo'=>$vehiculo,
+            200
         ]);
+       /*  return view('vehiculo',['vehiculo'=> $vehiculo]); */
     }
 
     public function registro_unico($id){
@@ -49,6 +53,7 @@ class VehiculoController extends Controller
             'vehiculo'=> $vehiculo,
             200
         ]);
+        /* return redirect()->route('index.vehiculo'); */
     }
 
     public function update(Request $request, $id){
@@ -77,6 +82,7 @@ class VehiculoController extends Controller
             'vehiculo'=> $vehiculo,
             200
         ]);
+        /* return redirect()->route('index.vehiculo'); */
     }
 
     public function destroy($id)
@@ -88,9 +94,11 @@ class VehiculoController extends Controller
             ]);
         }
         $vehiculo->delete();
+        
         return response()->json([
             'messegue'=>'vehiculo eliminado',
             200
         ]);
+        /* return redirect()->route('index.vehiculo')->with('success', 'Vehículo eliminado correctamente'); */
     }
 }

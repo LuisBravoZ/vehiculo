@@ -20,3 +20,4 @@ yarn-error.log
 /.idea
 /.vscode
 /.zed
+dbdata/pg_wal/000000010000000000000001
