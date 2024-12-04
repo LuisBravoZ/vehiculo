@@ -21,3 +21,4 @@ yarn-error.log
 /.vscode
 /.zed
 dbdata/pg_wal/000000010000000000000001
+dbdata/
